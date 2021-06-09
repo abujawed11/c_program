@@ -1,5 +1,5 @@
 #include <stdio.h>
-int type;
+
 float kmTomil()
 {
     float mil, km;
@@ -8,16 +8,6 @@ float kmTomil()
     scanf("%f", &km);
     mil = 0.621371 * km;
     printf("%f km = %f mile\n", km, mil);
-    printf("Do you want to do more conversion?\n1: Yes\t2: No\n");
-    scanf("%d", &op);
-    if (op == 1)
-    {
-        return 0;
-    }
-    else
-    {
-        type = 5;
-    }
 }
 
 float inTofoot()
@@ -28,16 +18,6 @@ float inTofoot()
     scanf("%f", &in);
     foot = (1 / 12.0) * in;
     printf("%f in = %f foot\n", in, foot);
-    printf("Do you want to do more conversion?\n1: Yes\t2: No\n");
-    scanf("%d", &op);
-    if (op == 1)
-    {
-        return 0;
-    }
-    else
-    {
-        type = 5;
-    }
 }
 
 float poTokg()
@@ -48,16 +28,6 @@ float poTokg()
     scanf("%f", &po);
     kg = 0.453592 * po;
     printf("%f pound = %f kg\n", po, kg);
-    printf("Do you want to do more conversion?\n1: Yes\t2: No\n");
-    scanf("%d", &op);
-    if (op == 1)
-    {
-        return 0;
-    }
-    else
-    {
-        type = 5;
-    }
 }
 
 float inTomtr()
@@ -68,26 +38,20 @@ float inTomtr()
     scanf("%f", &in);
     mtr = 0.0254 * in;
     printf("%f inch = %f meter\n", in, mtr);
-    printf("Do you want to do more conversion?\n1: Yes\t2: No\n");
-    scanf("%d", &op);
-    if (op == 1)
-    {
-        return 0;
-    }
-    else
-    {
-        type = 5;
-    }
 }
 
 int main()
 {
-
-    while (type != 5)
+    int op, type;
+    while (1)
     {
         printf("Select the conversion u want to do: \n");
         printf("1: km -> miles\n2: inches -> foot\n3: pound -> kgs\n4: inches -> meter\n5: Exit\n");
         scanf("%d", &type);
+        if (type == 5)
+        {
+            break;
+        }
         if (type > 5)
         {
             printf("Wrong Value entered\n");
@@ -108,6 +72,16 @@ int main()
             inTomtr();
             break;
         default:
+            break;
+        }
+        printf("Do you want to do more conversion?\n1: Yes\t2: No\n");
+        scanf("%d", &op);
+        if (op == 1)
+        {
+            continue;
+        }
+        else
+        {
             break;
         }
     }
