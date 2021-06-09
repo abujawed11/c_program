@@ -1,9 +1,10 @@
 #include <stdio.h>
+int prime(n);
 
 int prime(n)
 {
     int i,r,s=0;
-    for(i=1;i<=n;i++)
+    for (i = 1; i <=n; i++)
     {
         r=n%i;
         if(r==0)
@@ -15,6 +16,9 @@ int prime(n)
     {
         printf("%d\n",n);
     }
+    
+    
+
 }
 
 int main()
@@ -24,9 +28,8 @@ int main()
     scanf("%d",&n1);
     printf("Enter 2nd number: ");
     scanf("%d",&n2);
-    for (i = n1; i <= n2; i++)
+    for(i=n1;i<=n2;i++)
     {
         prime(i);
     }
-    return 0;
 }
