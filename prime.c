@@ -1,9 +1,9 @@
 #include <stdio.h>
 
-void prime(n)
+int prime(n)
 {
     int i,r,s=0;
-    for(i=0;i<=n;i++)
+    for(i=1;i<=n;i++)
     {
         r=n%i;
         if(r==0)
@@ -28,5 +28,5 @@ int main()
     {
         prime(i);
     }
-    
+    return 0;
 }
