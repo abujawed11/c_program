@@ -1,2 +1,4 @@
-
-    printf("%f\n",n2);
+printarr(arr);
+    arrrever(arr);
+    printf("\n");
+    printarr(arr);

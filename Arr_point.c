@@ -24,7 +24,7 @@ int main()
     while (*ptr)
     {
 
-        printf("%c", *ptr + 5);
+        printf("%c", *ptr);
         ptr++;
     }
 }
