@@ -7,9 +7,9 @@ int main()
     float SGPA = 0.0, TotalCredit = 0.0, creditGrade = 0.0;
     for (int i = 0; i < 9; i++)
     {
-        printf("Enter Credits Registerd: ");
+        printf("%d. Enter Credits Registerd: ", i + 1);
         scanf("%d", &credits[i]);
-        printf("Enter Your Grade: ");
+        printf("   Enter Your Grade: ");
         scanf("%d", &grade[i]);
     }
     for (int i = 0; i < 9; i++)
@@ -20,6 +20,15 @@ int main()
     {
         creditGrade = creditGrade + (credits[i] * grade[i]);
     }
+
+    for (int i = 0; i < 9; i++)
+    {
+        if (credits[i] * grade[i] == 0)
+        {
+            TotalCredit = TotalCredit - credits[i];
+        }
+    }
+
     SGPA = creditGrade / TotalCredit;
     printf("Toatl Credits: %f\n", TotalCredit);
     printf("Your SGPA is %f", SGPA);
