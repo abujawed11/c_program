@@ -1,8 +1,10 @@
 #include<stdio.h>
 int main()
 {
-    float f = 0.5;
-    if(f==0.5)
+    float f = 1.0;
+    if(f==1.0)
         printf("yes");
+    else
+        printf("no");
     return 0;
 }
